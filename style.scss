@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "MundoSansW01-Light";
+  src: url("//db.onlinewebfonts.com/t/5a3251f8b581e6f05556edeb208fc17b.eot");
+  src: url("//db.onlinewebfonts.com/t/5a3251f8b581e6f05556edeb208fc17b.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/5a3251f8b581e6f05556edeb208fc17b.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/5a3251f8b581e6f05556edeb208fc17b.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/5a3251f8b581e6f05556edeb208fc17b.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/5a3251f8b581e6f05556edeb208fc17b.svg#MundoSansW01-Light") format("svg");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin resetList {
+  list-style-type: none;
+}
+
+@mixin resetHyperlink {
+  text-decoration: none;
+  text-underline: none;
+  color: black;
+}
+
+@mixin fullHeightAndWidth {
+  height: 100%;
+  width: 100%;
+}
+
+$secondaryColor: #7fbb49;
+
+html {
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.marginLeft{
+  margin-left: auto;
+}
+
+.header {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  &List {
+    display: flex;
+    @include fullHeightAndWidth;
+    margin-right: 40px;
+    &Item {
+      @include resetList;
+      display: flex;
+      height: 92px;
+      width: 110px;
+      align-items: center;
+      justify-content: center;
+      &Link {
+        @include resetHyperlink;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: small;
+      }
+      &:hover {
+        border-bottom: 8px solid $secondaryColor;
+      }
+    }
+  }
+}
+
+.intro {
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 78px;
+  background-color: $secondaryColor;
+  &Header {
+    display: flex;
+    font-size: 27px;
+    padding-bottom: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    letter-spacing: -3px;
+    word-spacing: -2px;
+  }
+  &Content {
+    display: flex;
+    width: 850px;
+    text-align: center;
+    line-height: 1.6;
+    font-family: "MundoSansW01-Light";
+    color: white;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+  }
+}
+
+.teamDots {
+  display: flex;
+  width: 83.7%;
+  padding: 55px 110px;
+  flex-direction: column;
+  &Title {
+    padding-bottom: 70px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  &Cards {
+    display: flex;
+    flex-wrap: wrap;
+    &Card {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      height: 600px;
+      &Headers {
+        text-align: center;
+        padding-bottom: 15px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 500;
+        &BetweenTitle {
+          font-family: 'Josefin Sans', sans-serif;
+          font-weight: 400;
+          color: #b5b5b5;
+          padding-top: 10px;
+          font-size: 22px;
+        }
+      }
+      &Content {
+        text-align: center;
+        width: 250px;
+        font-family: "MundoSansW01-Light";
+        font-size: 25px;
+        color: black;
+        letter-spacing: -1px;
+        word-spacing: -1px;
+      }
+    }
+  }
+}
+
+.hyperlinks {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.footer {
+  height: 94px;
+  display: flex;
+  padding-top: 30px;
+  background-color: #efefef;
+  color: #a4a4a4;
+  font-family: "MundoSansW01-Light";
+  font-size: 20px;
+  &Copyright {
+  padding-left: 60px;
+  }
+  &Navigation {
+    display: flex;
+    margin-left: 550px;
+    &Links {
+      &Item {
+        padding-left: 20px;
+      }
+    }
+    &Icons {
+      padding-left: 36px;
+      &Link {
+        padding: 7px;
+        color: #777777;
+      }
+    }
+  }
+}
